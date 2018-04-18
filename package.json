@@ -1,0 +1,38 @@
+{
+  "name": "timecloud-front",
+  "version": "1.0.0",
+  "description": "A distributed scheduling system based on Node.js (front)",
+  "main": "app.js",
+  "bin": "bin/timecloud-standalone.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "timecloud"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iblueio/timecloud-front.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iblueio/timecloud-front/issues"
+  },
+  "homepage": "https://github.com/iblueio/timecloud-front#readme",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.15.0",
+    "commander": "^2.9.0",
+    "express": "^4.0.0",
+    "semver": "^5.3.0",
+    "timecloud-core": "^0.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "npm-run-all": "^4.1.2",
+    "supertest": "^3.0.0"
+  }
+}
