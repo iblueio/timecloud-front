@@ -35,6 +35,7 @@
               <small class="active-state"></small>
             </h2>
             <ul id="select-jobs" class="nav nav-pills">
+              <li role="presentation"><a role="button" data-action="schedule-job" onclick="window.open('/log')">查看日志</a></li>
               <li role="presentation"><a role="button" data-action="schedule-job">添加任务</a></li>
               <li role="presentation"><a role="button" data-action="select-all">全选</a></li>
               <li role="presentation"><a role="button" data-action="select-none">全不选</a></li>
@@ -154,8 +155,11 @@
           <% if (job.lockedAt) { %><p>Locked <time datetime="<%- moment(job.lockedAt).toISOString() %>"><%- moment(job.lockedAt).fromNow() %></time></p><% } %>
           <% if (job.repeatInterval) { %><p>Repeat each <%- job.repeatInterval %></p><% } %>
 
-          <strong>Job data</strong>
-          <pre><%- JSON.stringify(job.data, null, 2) %></pre>
+          <strong>Job logs</strong>
+          <pre>
+            <a href=<%- '/log/'+job.name %>>查看日志</a>
+          </pre>
+
           <% if (failed) { %>
             <strong>Failure reason</strong>
             <pre><%- JSON.stringify(job.failReason || '', null, 2) %></pre>
