@@ -1,6 +1,6 @@
 {
   "name": "timecloud-front",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A distributed scheduling system based on Node.js (front)",
   "main": "app.js",
   "bin": "bin/timecloud-standalone.js",
